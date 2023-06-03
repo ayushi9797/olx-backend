@@ -197,7 +197,7 @@ PostRouter.get('/others', async (req, res) => {
 // sort by date 
 PostRouter.get('/sortbydate', async (req, res) => {
     try {
-        const data = await PostModel.find().sort({ date: 1 });
+        const data = await PostModel.find().sort({ postedAt: 1 });
         console.log(data)
         res.send(data)
 
